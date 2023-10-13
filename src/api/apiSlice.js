@@ -4,6 +4,18 @@ export const apiSlice = createApi ({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery ({ baseUrl: 'https://6528e915931d71583df2912d.mockapi.io'}),// we can pass the header here it self
     tagTypes: ['formdata'],// to make the code to refetch again
+
+    //to send the auth token
+    
+    // reducerPath: 'ent',
+    // tagTypes: ['Entity'],
+    // baseQuery: fetchBaseQuery({
+    //     baseUrl: baseURL , prepareHeaders(headers) {
+    //         headers.append('authorization', `Bearer ${token}`)
+    //         return headers;
+    //     }
+    // }),
+
     endpoints: (builder) => ({
         getData : builder.query({
             query: () => '/Formdata',
