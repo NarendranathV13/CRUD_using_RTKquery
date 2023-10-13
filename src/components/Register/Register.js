@@ -26,13 +26,13 @@ const Register = () => {
             .required('Password is required'),
         cnfpassword: Yup.string()
             .oneOf([Yup.ref('password'), null], 'Passwords must match')
-            .required('Confirm Password is required'),
+            .required('Confirm your Password '),
         country: Yup.string().required('Country is required'),
         state: Yup.string().required('State is required'),
         city: Yup.string().required('City is required'),
     });
     
-    const [addData] = useAddDataMutation(); // Initialize the addData mutation
+    const [addData1] = useAddDataMutation(); // Initialize the addData mutation
 
     const formik = useFormik({
         initialValues: {
@@ -51,6 +51,7 @@ const Register = () => {
                 name: values.username,
                 email: values.email,
                 pincode: values.pin,
+                password: values.cnfpassword,
                 country: values.country,
                 state: values.state,
                 city: values.city,
@@ -58,7 +59,7 @@ const Register = () => {
 
             try {
                 //addData mutation to send a POST request
-                await addData(newData);
+                await addData1(newData);
                 resetForm();
                 Swal.fire({
                     icon: 'success',

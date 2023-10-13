@@ -10,11 +10,10 @@ import { apiSlice } from './api/apiSlice';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* wrapping the app with the apiProvider */}
+    {/* wrapping the app with the apiProvider to provide apiSlice */}
     <ApiProvider api={apiSlice}>
     <App />
-    </ApiProvider>
-    
+    </ApiProvider>  
   </React.StrictMode>
 );
 

@@ -72,7 +72,7 @@ const Details = () => {
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Pincode</th>
+                    <th scope="col">Pin-code</th>
                     <th scope="col">Country</th>
                     <th scope="col">State</th>
                     <th scope="col">City</th>
